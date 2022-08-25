@@ -21,10 +21,10 @@ function Navbar() {
       <div className='nav-form-container'> <input className='nav-form' type='text' /> </div>    
 
       <ul ref={navRef}>
-        <a href='/#'>Home</a>
+        <a href='/'>Home</a>
         <a href='/#'>About</a>
-        <a href='/#'>Contacts</a>
-        <a href='/#'>Products</a>
+        <a href='/contact'>Contacts</a>
+        <a href='/product'>Products</a>
         <a href='/cart' className='cart-container' >
           <span className='cart-length'>{cartItems.length === 0 ? "" : cartItems.length}</span>
           <FaOpencart className='cart' />

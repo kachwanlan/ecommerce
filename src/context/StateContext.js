@@ -8,6 +8,8 @@ const StateProvider = (props) => {
     const initialData = JSON.parse(localStorage.getItem("cartitems")) || [];
     console.log(initialData);
     const [cartItems, setCartItems] = useState(initialData);
+    const [paidFor, setPaidFor] = useState(false);
+    const [error, setError] = useState(null);
     
     useEffect(() => {
         localStorage.setItem("cartitems", JSON.stringify(cartItems))
@@ -61,7 +63,7 @@ const StateProvider = (props) => {
 
 
     return (
-        <StateContext.Provider value={{productItems, setProductItems, cartItems, addToCart, increaseCartItem, removeFromCart, clearCart}}>
+        <StateContext.Provider value={{productItems, setProductItems, cartItems, addToCart, increaseCartItem, removeFromCart, clearCart, paidFor, setPaidFor, error, setError }}>
             {props.children}        
         </StateContext.Provider>
   )
