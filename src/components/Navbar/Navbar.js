@@ -22,7 +22,7 @@ function Navbar() {
 
       <ul ref={navRef}>
         <a href='/'>Home</a>
-        <a href='/#'>About</a>
+        {/* <a href='/#'>About</a> */}
         <a href='/contact'>Contacts</a>
         <a href='/product'>Products</a>
         <a href='/cart' className='cart-container' >
